@@ -1,0 +1,121 @@
+[{
+    "_id": {
+      "$oid": "63c87584a987148b1e7ef54e"
+    },
+    "name": "La Moresca",
+    "owner": "Dylan Torres",
+    "stars": 8.6,
+    "reviews": "muy muy bueno",
+    "images": "https://media-cdn.tripadvisor.com/media/photo-s/12/f2/eb/03/salon.jpg",
+    "__v": 0,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1674081668259"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1674081668259"
+      }
+    }
+  },{
+    "_id": {
+      "$oid": "63c87584a987148b1e7ef54f"
+    },
+    "name": "Asador La Vaca Argentina",
+    "owner": "Felipe Reyes",
+    "stars": 8.8,
+    "reviews": "podría mejorar",
+    "images": "https://resizer.otstatic.com/v2/photos/wide-huge/1/25201504.jpg",
+    "__v": 0,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1674081668260"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1674081668260"
+      }
+    }
+  },{
+    "_id": {
+      "$oid": "63c87584a987148b1e7ef550"
+    },
+    "name": "Loló",
+    "owner": "Gabriel Gutierrez",
+    "stars": 7.7,
+    "reviews": "excelente",
+    "images": "https://www.lologdl.mx/img/big/LoloGaleria_03.jpg",
+    "__v": 0,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    }
+  },{
+    "_id": {
+      "$oid": "63c87584a987148b1e7ef551"
+    },
+    "name": "Outback",
+    "owner": "Luis Gonzalez",
+    "stars": 7.7,
+    "reviews": "muy bueno",
+    "images": "https://www.lologdl.mx/img/big/LoloGaleria_03.jpg",
+    "__v": 0,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    }
+  },{
+    "_id": {
+      "$oid": "63c87584a987148b1e7ef552"
+    },
+    "name": "Lupes BBQ",
+    "owner": "Veronica Santos",
+    "stars": 8.6,
+    "reviews": "un poco caro",
+    "images": "https://www.informador.mx/__export/1637346033966/sites/elinformador/img/2021/11/19/lupes_2_crop1637346033280.jpg_69363498.jpg",
+    "__v": 0,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    }
+  },{
+    "_id": {
+      "$oid": "63c87584a987148b1e7ef553"
+    },
+    "name": "Campomar",
+    "owner": "Emilio Cervantes",
+    "stars": 8.4,
+    "reviews": "Bastante bueno",
+    "images": "https://www.campomar.mx/assets/img/sucursales/P.1.webp",
+    "__v": 0,
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1674081668261"
+      }
+    }
+  }]
