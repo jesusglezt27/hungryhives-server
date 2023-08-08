@@ -2,6 +2,11 @@ const express = require('express');
 const router = express.Router();
 const Restaurant = require('../models/restaurant.model');
 const Reservation = require('../models/reservation.model');
+const reservationController = require('../controllers/reservation.controller');
+
+router.get('/user/:userId/reservations', reservationController.getUserReservations);
+router.put('/reservations/:reservationId', reservationController.updateReservation);
+router.delete('/reservations/:reservationId', reservationController.deleteReservation);
 
 // Ruta para obtener todos los restaurantes
 router.get('/', async (req, res) => {
@@ -42,15 +47,15 @@ router.post('/:id/reservations', async (req, res) => {
     }
 
     // Realizar las validaciones necesarias en los datos de la reserva
-    if (!reservationData.name || !reservationData.date || !reservationData.time) {
+    if (!reservationData.name || !reservationData.date || !reservationData.time || !reservationData.user) {
       return res.status(400).json({ error: 'Faltan datos de la reserva' });
     }
 
     // Crear la reserva y guardarla en la base de datos
     const reservation = new Reservation({
       restaurant: restaurantId,
+      user: reservationData.user,  // Aquí incluyes el ID del usuario
       name: reservationData.name,
-      email: reservationData.email,
       date: reservationData.date,
       time: reservationData.time,
       partySize: reservationData.partySize
@@ -63,5 +68,6 @@ router.post('/:id/reservations', async (req, res) => {
     res.status(500).json({ error: 'Error al crear la reserva' });
   }
 });
+
 
 module.exports = router;

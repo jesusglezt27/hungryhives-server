@@ -6,11 +6,12 @@ const reservationSchema = new mongoose.Schema({
     ref: 'Restaurant',
     required: true
   },
-  name: {
-    type: String,
+  user: {  // Nuevo campo para el usuario
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true
   },
-  email: {
+  name: {
     type: String,
     required: true
   },

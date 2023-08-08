@@ -23,23 +23,7 @@ function getTokenFromHeaders(req) {
   return null;
 }
 
-// Middleware to handle expired tokens and renew them
-const handleExpiredToken = (err, req, res, next) => {
-  if (err.name === "UnauthorizedError" && err.expiredAt) {
-    // Generate a new token here (based on your authentication logic)
-    const newToken = generateNewToken();
-
-    // Set the new token in the response header
-    res.set("Authorization", `Bearer ${newToken}`);
-    // Set the new token in the request payload for further processing
-    req.payload.token = newToken;
-  }
-  next();
-};
-
 // Export the middleware so that we can use it to create protected routes
 module.exports = {
   isAuthenticated,
-  handleExpiredToken,
 };
-
