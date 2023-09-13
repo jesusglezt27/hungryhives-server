@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Restaurant = require('../models/restaurant.model');
-const Reservation = require('../models/reservation.model');
-const reservationController = require('../controllers/reservation.controller');
+const Restaurant = require('../models/restaurant.model.js');
+const Reservation = require('../models/reservation.model.js');
+const reservationController = require('../controllers/reservation.controller.js');
 
 router.get('/user/:userId/reservations', reservationController.getUserReservations);
 router.put('/reservations/:reservationId', reservationController.updateReservation);
