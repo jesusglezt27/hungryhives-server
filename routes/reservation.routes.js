@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Reservation = require('../models/reservation.model');
+const Reservation = require('../models/Reservation.model');
 
 // Ruta para obtener todas las reservas
 router.get('/', async (req, res) => {
