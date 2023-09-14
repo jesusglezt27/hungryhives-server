@@ -33,7 +33,7 @@ app.use("/api/reservations", reservationRoutes);
 
 
 // Ruta para servir archivos estáticos desde la carpeta 'build' de la aplicación React
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
