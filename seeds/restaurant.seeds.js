@@ -54,11 +54,11 @@ const restaurants = [
         images: "https://monchitime.com/www/wp-content/uploads/2021/05/CL3A5557-b.jpg"
     }, 
     { 
-        name: "La Pasteriasa", 
+        name: "La Pasteria", 
         owner: "Roberto Lopez", 
         stars: 8.3,  
         reviews: "Excelente servicio", 
-        images: "https://guadalajaramidestino.com/wp-content/uploads/2018/04/85-LA-PASTERIA-PRINCIPAL.jpg"
+        images: "https://www.grupopasta.com/sites/default/files/pasteria.png"
     }, 
     { 
         name: "La Docena", 
