@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Restaurant = require('../models/restaurant.model.js');
-const Reservation = require('../models/reservation.model.js');
+const restaurant = require('../models/restaurant.model.js');
+const reservation = require('../models/reservation.model.js');
 const reservationController = require('../controllers/reservation.controller.js');
 
 router.get('/user/:userId/reservations', reservationController.getUserReservations);
@@ -11,7 +11,7 @@ router.delete('/reservations/:reservationId', reservationController.deleteReserv
 // Ruta para obtener todos los restaurantes
 router.get('/', async (req, res) => {
   try {
-    const restaurants = await Restaurant.find();
+    const restaurants = await restaurant.find();
     res.setHeader('Content-Type', 'application/json');
     res.json(restaurants);
   } catch (err) {
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const restaurantId = req.params.id;
-    const restaurant = await Restaurant.findById(restaurantId);
+    const restaurant = await restaurant.findById(restaurantId);
     if (!restaurant) {
       return res.status(404).json({ error: 'Restaurante no encontrado' });
     }
@@ -41,7 +41,7 @@ router.post('/:id/reservations', async (req, res) => {
     const reservationData = req.body;
 
     // Verificar si el restaurante existe
-    const restaurant = await Restaurant.findById(restaurantId);
+    const restaurant = await restaurant.findById(restaurantId);
     if (!restaurant) {
       return res.status(404).json({ error: 'Restaurante no encontrado' });
     }
@@ -52,7 +52,7 @@ router.post('/:id/reservations', async (req, res) => {
     }
 
     // Crear la reserva y guardarla en la base de datos
-    const reservation = new Reservation({
+    const reservation = new reservation({
       restaurant: restaurantId,
       user: reservationData.user,  // Aquí incluyes el ID del usuario
       name: reservationData.name,
