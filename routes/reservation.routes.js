@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Reservation = require('../models/reservation.model');
+const reservation = require('../models/reservation.model');
 
 // Ruta para obtener todas las reservas
 router.get('/', async (req, res) => {
   try {
-    const reservations = await Reservation.find();
+    const reservations = await reservation.find();
     res.json(reservations);
   } catch (error) {
     console.error(error);
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const reservation = await Reservation.findById(id);
+    const reservation = await reservation.findById(id);
     if (reservation) {
       res.json(reservation);
     } else {
