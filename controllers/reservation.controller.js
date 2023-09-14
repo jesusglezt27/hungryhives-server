@@ -1,4 +1,4 @@
-const Reservation = require('../models/reservation.model');
+const Reservation = require('../models/Reservation.model');
 
 // Controlador para obtener todas las reservas de un usuario por su ID
 exports.getUserReservations = async (req, res) => {
